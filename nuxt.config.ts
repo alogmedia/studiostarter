@@ -1,8 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxthq/studio'],
+  modules: ["@nuxt/content", "@nuxthq/studio"],
+
   routeRules: {
-    '/': { prerender: true }
-  }
-})
+    "/": { prerender: true },
+  },
+  css: ["~/assets/scss/app.scss"],
+
+  compatibilityDate: "2024-12-24",
+});
