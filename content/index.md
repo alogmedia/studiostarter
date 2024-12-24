@@ -1,9 +1,11 @@
-# Nuxt Content
+# Nuxt Studio læringsprojekt
 
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
+Dette vil være starten på et Nuxt Studio project som i sidste ende vil være grundstenen for en forening.
 
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
+Her vil der være mulighed for at lave content direkte og hurtigt nemt via nuxt studio portalen.
+
+Jeg ser frem til at vise det frem
 
 ---
 
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
+Der vil komme meget mere i nærmeste fremtid.
