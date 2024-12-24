@@ -1,6 +1,6 @@
 <template>
   <main>
-    <header />
+    <Header />
     <ContentDoc />
   </main>
 </template>
