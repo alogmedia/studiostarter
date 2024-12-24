@@ -3,11 +3,27 @@
     <Header />
     <section class="content-container">
       <article class="content-wrapper">
+        <div class="mainImg" v-if="mainImg">
+          <img :src="mainImg || 'mainimage.jpg'" alt="Main image" />
+        </div>
         <ContentDoc />
       </article>
     </section>
+    <Footer />
   </main>
 </template>
+
+<script setup>
+import { useAsyncData } from "#app";
+
+// Fetch the Markdown content and access the front matter
+const { data } = await useAsyncData("content", () =>
+  $fetch(`/api/content/${route.params.slug}`),
+);
+
+// Extract the main image from the front matter
+const mainImg = data.value?.frontMatter?.mainImg || "mainimage.jpg";
+</script>
 
 <style scoped lang="scss">
 .content-container {
@@ -18,7 +34,9 @@
 }
 
 .content-wrapper {
-  max-width: 800px;
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
   background: #fff; /* White background for content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border-radius: 8px; /* Rounded corners */
@@ -37,7 +55,17 @@
       text-decoration: underline;
     }
   }
+  .mainImg {
+    margin-bottom: 2rem;
+    text-align: center;
 
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
   /* Style headings inside the content */
   h1,
   h2,
