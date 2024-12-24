@@ -1,16 +1,22 @@
 ---
-title: "Main Page"
-mainImg: "/mainimage.jpg"
+title: Main Page
+mainImg: /mainimage.jpg
 ---
 
-# Nuxt Content
+# Hjemmesiden er under opbyning
 
-Dette vil være starten på et Nuxt Studio project som i sidste ende vil være grundstenen for en forening.
+Tag på sommerhøjskole i Sydslesvig
 
-Her vil der være mulighed for at lave content direkte og hurtigt nemt via nuxt studio portalen.
+Tag familien med til en uge med hygge og aktiviteter med den helt særlige stemning, man kun kan få på en højskole.
 
-Jeg ser frem til at vise det frem
+I 2025 afholdes sommerhøjskole i uge 31.
+
+_Målgruppen er unge, voksne og familier med børn._    
+
+_Prisen er lav, så alle kan være med_
+
+_(100-170 Euro for en hel uge!)_
 
 ---
 
-Der vil komme meget mere i nærmeste fremtid.
+Der vil komme meget mere information i nærmeste fremtid
