@@ -109,6 +109,7 @@ const mainLogo = "mainLogo.png"; // Update this to dynamically fetch the logo if
     list-style: none;
     gap: 2rem;
     font-weight: bold;
+    padding: 10px;
 
     li {
       position: relative;
@@ -129,6 +130,7 @@ const mainLogo = "mainLogo.png"; // Update this to dynamically fetch the logo if
           justify-content: space-between;
           align-items: center;
           cursor: pointer;
+          gap: 5px;
 
           svg {
             margin-left: 0.5rem;
@@ -172,7 +174,7 @@ const mainLogo = "mainLogo.png"; // Update this to dynamically fetch the logo if
       top: 60px;
       left: 0;
       width: 100%;
-      background: #34495e;
+      background: #34733d;
       padding: 1rem 0;
 
       li {
