@@ -36,7 +36,7 @@ const mainImg = data.value?.frontMatter?.mainImg || "mainimage.jpg";
 .content-wrapper {
   display: flex;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1366px;
   background: #fff; /* White background for content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border-radius: 8px; /* Rounded corners */
@@ -56,7 +56,6 @@ const mainImg = data.value?.frontMatter?.mainImg || "mainimage.jpg";
     }
   }
   .mainImg {
-    margin-bottom: 2rem;
     text-align: center;
 
     img {

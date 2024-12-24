@@ -1,18 +1,31 @@
 <template>
   <footer class="footer">
     <div class="footer-container">
-      <p>&copy; 2024 Nuxt Studio. All rights reserved.</p>
+      <NuxtLink to="/">
+        <img :src="mainLogo || 'mainLogo.png'" alt="Main logo" />
+      </NuxtLink>
+      <p>&copy; 2024 dssh.dk Alle rettigheder forbeholdes.</p>
       <ul class="footer-links">
-        <li><NuxtLink to="/privacy">Privacy Policy</NuxtLink></li>
-        <li><NuxtLink to="/terms">Terms of Service</NuxtLink></li>
+        <li><NuxtLink to="/privacy">Privatlivspolitik</NuxtLink></li>
       </ul>
     </div>
   </footer>
 </template>
 
+<script setup>
+import { useAsyncData } from "#app";
+// Fetch the Markdown content and access the front matter
+const { data } = await useAsyncData("content", () =>
+  $fetch(`/api/content/${route.params.slug}`),
+);
+
+// Extract the main image from the front matter
+const mainLogo = data.value?.frontMatter?.mainImg || "mainLogo.png";
+</script>
+
 <style scoped lang="scss">
 .footer {
-  background-color: #2c3e50;
+  background-color: #34733d;
   color: #ecf0f1;
   padding: 1rem 0;
   text-align: center;
@@ -32,6 +45,7 @@
       list-style: none;
       display: flex;
       gap: 1.5rem;
+      padding: 0;
 
       li a {
         text-decoration: none;
